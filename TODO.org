@@ -1,7 +1,14 @@
+#+STARTUP: hidestars
+
 * TODO
-** Add internship to website
-** Consider adding rowing to website
-** Add Hack4Impact to website
-** Link to both majors
-** For reference: Derek, Reed, Fabio
-** Pictures for each project
+** DONE Add internship to website
+** DONE Consider adding rowing to website
+** DONE Add Hack4Impact to website
+** TODO Show current reading
+** TODO Upload resume - consider pdf.js
+** TODO Upload .emacs to website
+** TODO Consider adding KB3NUB
+** TODO Link to both majors
+** TODO For reference: Derek, Reed, Fabio
+** TODO Pictures for each project
+** TODO Add belgium reference (personalzie with link to la hulpe?) like conal.net
