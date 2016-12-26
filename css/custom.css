@@ -27,7 +27,8 @@ h2 {
 
 li {
     list-style-type: circle;
-    padding-left: 1em;
+    margin-left: 2em;
+    list-style-position: outside;
 }
 
 h1 {
