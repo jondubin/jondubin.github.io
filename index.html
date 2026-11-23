@@ -9,7 +9,6 @@
   * { box-sizing: border-box; }
   html, body { margin: 0; min-height: 100%; }
   body { min-height: 100svh; display: grid; place-items: center; background: #fff; }
-  .wanderer { position: fixed; left: 50%; top: 50%; width: max-content; transform: translate(-50%, -50%); will-change: left, top; }
   a { display: inline-block; color: #000; font: clamp(22px, 4.5vw, 36px) Courier, 'Courier New', monospace; text-decoration: none; animation: drift 13s ease-in-out infinite; }
   a:focus-visible { outline: 1px dotted currentColor; outline-offset: 10px; }
   @keyframes drift {
@@ -21,62 +20,6 @@
 </style>
 </head>
 <body>
-<div class="wanderer"><a href="https://jonathandub.in/">jonathandub.in</a></div>
-<script>
-  const wanderer = document.querySelector('.wanderer');
-  const link = wanderer.querySelector('a');
-  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-  let mouse = null;
-  let x = innerWidth / 2, y = innerHeight / 2;
-  let previousTime = 0;
-  addEventListener('pointermove', event => {
-    if (event.pointerType === 'mouse') mouse = { x: event.clientX, y: event.clientY };
-  });
-  document.addEventListener('pointerleave', () => { mouse = null; });
-  addEventListener('blur', () => { mouse = null; });
-  function move(time) {
-    const dt = Math.min((time - previousTime) / 1000, .04);
-    previousTime = time;
-    const halfWidth = wanderer.offsetWidth / 2 + 20;
-    const halfHeight = wanderer.offsetHeight / 2 + 24;
-    let escaping = false;
-    if (mouse && !reducedMotion.matches && document.activeElement !== link) {
-      const dx = x - mouse.x, dy = y - mouse.y;
-      // Use an ellipse so the entire word, including its ends, dodges the cursor.
-      const rx = halfWidth + 35, ry = halfHeight + 35;
-      const distance = Math.hypot(dx / rx, dy / ry);
-      if (distance < 1) {
-        escaping = true;
-        let directionX = dx / rx, directionY = dy / ry;
-        if (distance < .01) { directionX = 0; directionY = mouse.y > innerHeight / 2 ? -1 : 1; }
-        // At an edge, steer back into the available space instead of getting stuck.
-        if ((x <= halfWidth + 5 && directionX < 0) || (x >= innerWidth - halfWidth - 5 && directionX > 0)) directionX = 0;
-        if ((y <= halfHeight + 5 && directionY < 0) || (y >= innerHeight - halfHeight - 5 && directionY > 0)) directionY = 0;
-        if (Math.hypot(directionX, directionY) < .01) directionY = y < innerHeight / 2 ? 1 : -1;
-        const length = Math.hypot(directionX, directionY);
-        const speed = 1600 * (1 - distance) + 650;
-        x += directionX / length * speed * dt;
-        y += directionY / length * speed * dt;
-      }
-    }
-    if (!escaping && document.activeElement !== link) {
-      const ease = reducedMotion.matches ? 1 : 1 - Math.exp(-2.2 * dt);
-      const nextX = x + (innerWidth / 2 - x) * ease;
-      const nextY = y + (innerHeight / 2 - y) * ease;
-      // Glide home only while the next step leaves comfortable cursor clearance.
-      const clear = !mouse || reducedMotion.matches || Math.hypot(
-        (nextX - mouse.x) / (halfWidth + 45),
-        (nextY - mouse.y) / (halfHeight + 45)
-      ) > 1;
-      if (clear) { x = nextX; y = nextY; }
-    }
-    x = Math.max(halfWidth, Math.min(innerWidth - halfWidth, x));
-    y = Math.max(halfHeight, Math.min(innerHeight - halfHeight, y));
-    wanderer.style.left = x + 'px';
-    wanderer.style.top = y + 'px';
-    requestAnimationFrame(move);
-  }
-  requestAnimationFrame(move);
-</script>
+<a href="https://jonathandub.in/">jonathandub.in</a>
 </body>
 </html>
