@@ -1,155 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Jonathan Dubin</title>
-  <meta name="description" content="Jonathan Dubin - Software Engineer at Airbnb ">
-  <meta name="author" content="">
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-  <link href='http://fonts.googleapis.com/css?family=Rosarivo' rel='stylesheet' type='text/css'>
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/custom.css">
-  
-  <!-- <link rel="stylesheet" href="css/typeplate.css"> -->
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!-- <link rel="icon" type="image/png" href="images/favicon.png"> -->
-
-
-  <meta name="description" content="">
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="jonathandub.in">
+<title>jonathandub.in</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; min-height: 100%; }
+  body { min-height: 100svh; display: grid; place-items: center; background: #fff; }
+  a { display: inline-block; color: #000; font: clamp(24px, 6vw, 48px) Courier, 'Courier New', monospace; text-decoration: none; animation: drift 13s ease-in-out infinite; }
+  a:focus-visible { outline: 1px dotted currentColor; outline-offset: 10px; }
+  @keyframes drift {
+    0%, 100% { transform: translate(-7px, 4px) rotate(-3deg); }
+    33% { transform: translate(9px, -7px) rotate(2deg); }
+    66% { transform: translate(-3px, 8px) rotate(-1deg); }
+  }
+  @media (prefers-reduced-motion: reduce) { a { animation: none; } }
+</style>
 </head>
-<body>
-
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div id="header" class="row">
-      <div class="nine columns">
-          <h1>Jonathan Dubin</h1>
-          <p> <strong>Engineer at Airbnb
-              <br>
-              Studied CS and Mathematical Economics at Penn</strong>
-            </p>
-            <p>
-            <div id="links">
-           <a href="http://www.github.com/jondubin">GitHub</a>  |
-           <a href="https://www.linkedin.com/pub/jonathan-dubin/a8/11a/ab7"> LinkedIn</a> |
-           <a href="Resume_2018.pdf">Resume</a> <!-- | -->
-           <!-- <a href="https://news.ycombinator.com/user?id=dubin">HN Profile</a> -->
-           </div>
-        </p>
-      </div>
-      <div class="three columns">
-        <img width="175" src="images/profile.jpg">
-      </div>
-   </div>
-
-          <hr>
-          <h2>Experience</h2>
-          <ul>
-             <li>
-              <strong>Airbnb</strong> - <i>July 2016 to present </i> - I'm currently an engineer at Airbnb. I started on Airbnb's growth team. 
-               Now I'm working on something else, t.b.a. soon. 
-            </li>
-            
-            <li>
-              <strong>Hack4Impact National</strong> - <i>May 2017 to present </i> - A small group of alumni and I have continued working on <a href="https://hack4impact.org">Hack4Impact</a> 
-              post-grad, focused on expansion and creating chapters at schools across the country.
-            </li>
-            
-            <li>
-              <strong>eBay NYC</strong> - <i>May to Aug, 2015</i> - I spent the summer of 2015 interning as a product development 
-              engineer on eBay's homepage team in NYC.
-            </li>
-                          
-            </li>
-  <li><strong>Hack4Impact</strong> - <i>Jan 2015 to May, 2016</i> - While at school, I was a developer in
-            <a href="http://hack4impact.org">Hack4Impact</a>, a
-            student-run organization at Penn that develops software
-            for and with nonprofits. I've worked
-            on <a href="https://github.com/hack4impact/journalup">JournalUp</a>
-            and <a href="https://github.com/hack4impact/MapsForAll">MapsForAll</a>.</li>
-            </ul>
-            <h2>Projects</h2>
-          <ul>  
-            <li><strong>Brand Killer</strong> - An experimental,
-            real-world adblock created at PennApps Winter '15. It uses
-            a homemade head-mounted display and computer vision to
-            detect and blur ads in real-time.  It went on to capure
-            the imagination of people at  <a href="https://www.wired.com/2015/01/adblock-real-life-adblock-real-life/">Wired</a>, <a href="https://gizmodo.com/someone-built-adblock-for-the-real-world-1682420151">Gizmodo</a>,
-            <a href="https://www.theverge.com/2015/1/27/7921859/brand-killer-headset-augmented-reality">The Verge</a>, and more.
-              <br>
-              <span class="links">
-              <a href="http://www.youtube.com/watch?v=eDPn7MGxPjs">YouTube
-                Demo</a>
-              </span>| <a href="http://jonathandub.in/cognizance">Site</a>
-              | <a href="https://github.com/jondubin/cognizance">GitHub</a>
-              | <a href="https://news.ycombinator.com/item?id=8925019">HN
-              Discussion</a>
-            </li>
-            
-            <li><strong>PennCoursePlus</strong> - Chrome extension
-            that helps students find great courses. Actively used by
-            over 1000 Penn students. Featured in
-              <a href="http://www.thedp.com/article/2015/04/penn-course-registration-additions">
-                an article</a> in Penn's School Newspaper
-            and <a href="http://madeatpenn.pennlabs.org">Made at
-            Penn</a>. <br> <span class="links">
-            <a href="https://penncourseplus.com">Site</a>
-            | <a href="https://chrome.google.com/webstore/detail/penncourseplus/cpibgbfiblcgbnpbphpeoafgcjmncpbf">Chrome Extension</a> | 
-            <a href="https://github.com/PennCoursePlus">GitHub</a> </span> </li>
-
-            <li><strong>Wayback HN</strong> - Jump back to old Hacker
-              News front pages. A cross between the Wayback machine
-              and Hacker News. Received over 15,000 views and 500 votes on HN
-              its first day online.
-              <br> <span class="links">
-                <a href="http://www.waybackhn.com">Site</a> |
-                <a href="https://github.com/jondubin/HN-Wayback">GitHub</a> </span> | <a href="https://news.ycombinator.com/item?id=9746188">HN Discussion</a>
-            </li>
-
-          <li><strong>Hint</strong> - Augments conversations in real
-          time by continuously listening to speech and providing
-          information on the topics being discussed. An honorable mention
-          at Greylock's Hackfest 2015. <br>
-          <span class="links">
-            <a href="https://hintjs.heroku.com">Site</a> | 
-            <a href="https://github.com/reedrosenbluth/hint">Source</a></li>
-          </span>
-          </li>
-
-            <!-- <li><strong>Locust Talk</strong> - Discussion board for -->
-            <!--   students, built with Meteor for CIS 350. <br> -->
-            <!-- <a href="http://locusttalk.meteor.com">Site</a></li> -->
-            <hr>
-            <p> Reach out to me at <code>jonathandubin at gmail dot com</code></p>            
-  </div>
-</body>
+<body><a href="https://jonathandub.in/">jonathandub.in</a></body>
 </html>
-
-
-<!--
-Inspiration for the site:
-http://www.crockford.com
-http://www.saurik.com
-http://bellard.org
-https://michaelcarrano.com
-http://david.heinemeierhansson.com/#family
-http://dave.is
-http://paulgraham.com/index.html
--->
