@@ -42,7 +42,7 @@
     if (mouse && !reducedMotion.matches && document.activeElement !== link) {
       const dx = x - mouse.x, dy = y - mouse.y;
       // Use an ellipse so the entire word, including its ends, dodges the cursor.
-      const rx = halfWidth + 100, ry = halfHeight + 100;
+      const rx = halfWidth + 35, ry = halfHeight + 35;
       const distance = Math.hypot(dx / rx, dy / ry);
       if (distance < 1) {
         let directionX = dx / rx, directionY = dy / ry;
